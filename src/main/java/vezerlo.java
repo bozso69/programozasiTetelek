@@ -4,18 +4,24 @@ public class vezerlo {
         int eredmeny;
 
         eredmeny = osszegzesTetele(tomb);
+        eredmeny = megszamlalasTetele(tomb);
+
+
+    }
 
 
 
+
+    public int megszamlalasTetele(int[] tomb) {
+
+        return 0;
     }
 
     public int osszegzesTetele(int[] tomb) {
         int vissza = 0;
         for (int Item: tomb) {
             vissza += Item;
-
         }
-
-        return 0;
+        return vissza;
     }
 }
