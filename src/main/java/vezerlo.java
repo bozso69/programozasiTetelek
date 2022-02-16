@@ -2,14 +2,18 @@ public class vezerlo {
     public vezerlo() {
         int[] tomb = {1, 2, 4, 5, 43, 6, 8, 10};
         int eredmeny;
+        boolean isEredmeny;
 
         eredmeny = osszegzesTetele(tomb);
         eredmeny = megszamlalasTetele(tomb);
+       isEredmeny = eldontestetele(tomb, 5);
 
 
     }
 
+    public boolean eldontestetele(int[] tomb, int i) {
 
+    return false;}
 
 
     public int megszamlalasTetele(int[] tomb) {

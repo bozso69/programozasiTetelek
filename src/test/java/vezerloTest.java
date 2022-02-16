@@ -38,5 +38,12 @@ class vezerloTest {
         assertEquals(4, vez.megszamlalasTetele(tomb));
         assertNotEquals(4, vez.megszamlalasTetele(tomb0));
     }
+    @Test
+    @DisplayName("Eldöntés Tétele")
+    public void eldontestetele(){
+        assertTrue(vez.eldontestetele(tomb,5));
+        assertTrue(vez.eldontestetele(tomb0,0));
+        assertFalse(vez.eldontestetele(tomb, 45));
 
+    }
 }
