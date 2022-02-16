@@ -29,12 +29,14 @@ class vezerloTest {
     public void osszegzesTetele() {
         assertEquals(79, vez.osszegzesTetele(tomb));
         assertEquals(0, vez.osszegzesTetele(tomb0));
+        assertNotEquals(79+1,vez.osszegzesTetele(tomb));
     }
 
     @Test
     @DisplayName("Megszámlálés Tetele")
     public void megszamlalasTetele(){
         assertEquals(4, vez.megszamlalasTetele(tomb));
+        assertNotEquals(4, vez.megszamlalasTetele(tomb0));
     }
 
 }

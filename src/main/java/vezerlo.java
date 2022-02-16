@@ -13,8 +13,14 @@ public class vezerlo {
 
 
     public int megszamlalasTetele(int[] tomb) {
+        int vissza = 0;
+        for (int Item: tomb) {
+            if (Item > 5){
+                vissza++;
+            }
+        }
 
-        return 0;
+        return vissza;
     }
 
     public int osszegzesTetele(int[] tomb) {
