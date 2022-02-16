@@ -11,9 +11,16 @@ public class vezerlo {
 
     }
 
-    public boolean eldontestetele(int[] tomb, int i) {
+    public boolean eldontestetele(int[] tomb, int szam) {
+        int j = 0;
+        while (j< tomb.length && tomb[j] != szam){
+            j++;
+            }
+        if (j< tomb.length){
+            return true;
+        }else return false;
 
-    return false;}
+    }
 
 
     public int megszamlalasTetele(int[] tomb) {
