@@ -7,9 +7,15 @@ public class vezerlo {
         eredmeny = osszegzesTetele(tomb);
         eredmeny = megszamlalasTetele(tomb);
         isEredmeny = eldontestetele(tomb, 5);
-        eredmeny = kivalasztasTetele(tomb, 123);
+        eredmeny = kivalasztasTetele(tomb, 5);
+        isEredmeny = keresesTetele(tomb, 5);
 
 
+    }
+
+    public boolean keresesTetele(int[] tomb, int i) {
+
+        return false;
     }
 
     public int kivalasztasTetele(int[] tomb, int szam) {

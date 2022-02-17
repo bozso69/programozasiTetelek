@@ -12,6 +12,7 @@ class vezerloTest {
 
     int[] tomb = {1, 2, 4, 5, 43, 6, 8, 10};
     int[] tomb0 = {0,0,0,0,0,0,0,0,0,0,};
+    int[] tombMinus = {-5,-2,-9,10,18,1,-12,12,-18,-14,};
 
     @BeforeEach
     void setUp() {
@@ -30,6 +31,8 @@ class vezerloTest {
         assertEquals(79, vez.osszegzesTetele(tomb));
         assertEquals(0, vez.osszegzesTetele(tomb0));
         assertNotEquals(79+1,vez.osszegzesTetele(tomb));
+        assertNotEquals(-39,vez.osszegzesTetele(tombMinus));
+        assertEquals(-19,vez.osszegzesTetele(tombMinus));
     }
 
     @Test
@@ -52,5 +55,11 @@ class vezerloTest {
         assertNotEquals(5,vez.kivalasztasTetele(tomb,5));
         assertEquals(0,vez.kivalasztasTetele(tomb,11));
 
+    }
+    @Test
+    @DisplayName("Keresés Tétele")
+    public void keresesTetele(){
+        assertTrue(vez.keresesTetele(tomb,5));
+        assertFalse(vez.keresesTetele(tomb,0));
     }
 }
