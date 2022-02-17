@@ -1,6 +1,7 @@
 public class vezerlo {
     public vezerlo() {
         int[] tomb = {1, 2, 4, 5, 43, 6, 8, 10};
+        int[] visszTomb = new int[tomb.length];
         int eredmeny;
         boolean isEredmeny;
 
@@ -9,8 +10,20 @@ public class vezerlo {
         isEredmeny = eldontestetele(tomb, 5);
         eredmeny = kivalasztasTetele(tomb, 5);
         isEredmeny = keresesTetele(tomb, 5);
+        visszTomb = kivalogatasTetele(tomb, 5);
 
 
+    }
+
+    public int[] kivalogatasTetele(int[] tomb, int szam) {
+        int j=0;
+        int[] tombVissza = new int[tomb.length];
+        for (int Item: tomb) {
+            if (Item > szam){
+                tombVissza[j++] = Item;
+            }
+        }
+        return tombVissza;
     }
 
     public boolean keresesTetele(int[] tomb, int szam) {

@@ -11,6 +11,8 @@ class vezerloTest {
     vezerlo vez;
 
     int[] tomb = {1, 2, 4, 5, 43, 6, 8, 10};
+    int[] tombvisszaNagyobb = {43, 6, 8, 10,0,0,0,0};
+
     int[] tomb0 = {0,0,0,0,0,0,0,0,0,0,};
     int[] tombMinus = {-5,-2,-9,10,18,1,-12,12,-18,-14,};
 
@@ -61,5 +63,11 @@ class vezerloTest {
     public void keresesTetele(){
         assertTrue(vez.keresesTetele(tomb,5));
         assertFalse(vez.keresesTetele(tomb,0));
+    }
+    @Test
+    @DisplayName("Kiválogatás Tétele")
+    public void kivalogatasTetele(){
+        assertArrayEquals(new int[]{43, 6, 8, 10,0,0,0,0}, vez.kivalogatasTetele(tomb,5));
+
     }
 }
