@@ -44,6 +44,13 @@ class vezerloTest {
         assertTrue(vez.eldontestetele(tomb,5));
         assertTrue(vez.eldontestetele(tomb0,0));
         assertFalse(vez.eldontestetele(tomb, 45));
+    }
+    @Test
+    @DisplayName("Kiválasztás Tétele")
+    public void kivalasztasTetele(){
+        assertEquals(4,vez.kivalasztasTetele(tomb,5));
+        assertNotEquals(5,vez.kivalasztasTetele(tomb,5));
+        assertEquals(0,vez.kivalasztasTetele(tomb,11));
 
     }
 }
