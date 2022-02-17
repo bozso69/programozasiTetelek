@@ -13,9 +13,14 @@ public class vezerlo {
 
     }
 
-    public boolean keresesTetele(int[] tomb, int i) {
-
-        return false;
+    public boolean keresesTetele(int[] tomb, int szam) {
+        int j = 0;
+        while (j < tomb.length && tomb[j] !=  szam){
+            j++;
+        }
+        if (j< tomb.length){
+            return true;
+        }else return false;
     }
 
     public int kivalasztasTetele(int[] tomb, int szam) {
@@ -29,11 +34,11 @@ public class vezerlo {
                 System.out.println("vezerlo.kivalasztasTetele");
                 return j+1;
             }else {
-                j = 0;
-            };
+                return  0;
+            }
 
-        System.out.println("j = " + j);
-    return j;
+
+
     }
 
 
