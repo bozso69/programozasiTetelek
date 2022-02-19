@@ -20,11 +20,24 @@ public class vezerlo {
     }
 
     public int minimumTetel(int[] tomb) {
-        return 0;
+        int j=tomb[0];
+        for (int Item: tomb) {
+            if (j> Item){
+                j=Item;
+            }
+        }
+        return j;
     }
 
     public int maximumTetel(int[] tomb) {
-        return 0;
+        int j=tomb[0];
+        for (int Item: tomb) {
+            if (j< Item){
+                System.out.println(j + " - "+ Item);
+                j=Item;
+            }
+        }
+        return j;
     }
 
     private void szetvalogatasTetele(int[] tomb, int szam) {

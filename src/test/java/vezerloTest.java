@@ -83,9 +83,9 @@ class vezerloTest {
     @Test
     @DisplayName("Maximum kiválasztás tétele")
     void maximumTetel() {
-        assertEquals(10,vez.maximumTetel(tomb));
+        assertEquals(43,vez.maximumTetel(tomb));
         assertNotEquals(2, vez.maximumTetel(tomb));
         assertNotEquals(11, vez.maximumTetel(tomb));
-        assertEquals(99, vez.minimumTetel(new int[]{12,5,23,8,43,99,1}));
+        assertEquals(99, vez.maximumTetel(new int[]{12,5,23,8,43,99,1}));
     }
 }
