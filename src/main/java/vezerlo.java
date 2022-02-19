@@ -1,7 +1,7 @@
 public class vezerlo {
     public vezerlo() {
         int[] tomb = {1, 2, 4, 5, 43, 6, 8, 10};
-        int[] tomb1 = {10, 20, 40, 5, 43, 6, 80, 10};
+        int[] tomb1 = {1, 20, 40, 5, 43, 6, 80, 10};
         int[] visszTomb = new int[tomb.length];
         int eredmeny;
         boolean isEredmeny;
@@ -19,8 +19,35 @@ public class vezerlo {
     }
 
     public int[] metszetTetele(int[] tomb, int[] tomb1) {
-        return new int[0];
-    }
+        int[] visszTomb = new int[tomb.length];
+        int j =0;
+        for (int ItemTomb: tomb) {
+            for (int ItemTomb1 : tomb1) {
+                if (ItemTomb == ItemTomb1){
+                    visszTomb[j++] = ItemTomb;
+                }
+
+            }
+        }
+
+        System.out.println();
+        System.out.println("****************");
+       System.out.print("Tömb: ");
+        for (int Item:tomb) {
+            System.out.print(Item+", ");
+        }
+        System.out.println();
+
+       System.out.print("Tömb1: ");
+        for (int Item:tomb1) {
+            System.out.print(Item+", ");
+        }
+        System.out.println();
+        System.out.print("Vissza Tömb: ");
+        for (int Item:visszTomb) {
+            System.out.print(Item+", ");
+        }
+        return visszTomb;}
 
     public int minimumTetel(int[] tomb) {
         int j=tomb[0];
@@ -36,10 +63,11 @@ public class vezerlo {
         int j=tomb[0];
         for (int Item: tomb) {
             if (j< Item){
-                System.out.println(j + " - "+ Item);
+
                 j=Item;
             }
         }
+
         return j;
     }
 

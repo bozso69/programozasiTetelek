@@ -11,7 +11,7 @@ class vezerloTest {
     vezerlo vez;
 
     int[] tomb =  {1, 2, 4, 5, 43, 6, 8, 10};
-    int[] tomb1 = {10, 20, 40, 5, 43, 6, 80, 10};
+    int[] tomb1 = {1, 20, 40, 5, 43, 6, 80, 10};
     int[] tombvisszaNagyobb = {43, 6, 8, 10,0,0,0,0};
 
     int[] tomb0 = {0,0,0,0,0,0,0,0,0,0,};
@@ -93,6 +93,6 @@ class vezerloTest {
     @Test
     @DisplayName("Metszet Tétele")
     void metszetTetele() {
-        assertArrayEquals(new int[]{5,43,6}, vez.metszetTetele(tomb,tomb1));
+        assertArrayEquals(new int[]{1,5,43,6,10,0,0,0}, vez.metszetTetele(tomb,tomb1));
     }
 }
