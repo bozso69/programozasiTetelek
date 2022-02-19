@@ -1,6 +1,7 @@
 public class vezerlo {
     public vezerlo() {
         int[] tomb = {1, 2, 4, 5, 43, 6, 8, 10};
+        int[] tomb1 = {10, 20, 40, 5, 43, 6, 80, 10};
         int[] visszTomb = new int[tomb.length];
         int eredmeny;
         boolean isEredmeny;
@@ -14,9 +15,11 @@ public class vezerlo {
         szetvalogatasTetele(tomb,5);
         eredmeny = maximumTetel(tomb);
         eredmeny = minimumTetel(tomb);
+        visszTomb = metszetTetele(tomb,tomb1);
+    }
 
-
-
+    public int[] metszetTetele(int[] tomb, int[] tomb1) {
+        return new int[0];
     }
 
     public int minimumTetel(int[] tomb) {

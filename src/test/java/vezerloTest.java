@@ -10,7 +10,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class vezerloTest {
     vezerlo vez;
 
-    int[] tomb = {1, 2, 4, 5, 43, 6, 8, 10};
+    int[] tomb =  {1, 2, 4, 5, 43, 6, 8, 10};
+    int[] tomb1 = {10, 20, 40, 5, 43, 6, 80, 10};
     int[] tombvisszaNagyobb = {43, 6, 8, 10,0,0,0,0};
 
     int[] tomb0 = {0,0,0,0,0,0,0,0,0,0,};
@@ -87,5 +88,11 @@ class vezerloTest {
         assertNotEquals(2, vez.maximumTetel(tomb));
         assertNotEquals(11, vez.maximumTetel(tomb));
         assertEquals(99, vez.maximumTetel(new int[]{12,5,23,8,43,99,1}));
+    }
+
+    @Test
+    @DisplayName("Metszet Tétele")
+    void metszetTetele() {
+        assertArrayEquals(new int[]{5,43,6}, vez.metszetTetele(tomb,tomb1));
     }
 }
