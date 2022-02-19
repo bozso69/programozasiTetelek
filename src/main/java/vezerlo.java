@@ -12,8 +12,19 @@ public class vezerlo {
         isEredmeny = keresesTetele(tomb, 5);
         visszTomb = kivalogatasTetele(tomb, 5);
         szetvalogatasTetele(tomb,5);
+        eredmeny = maximumTetel(tomb);
+        eredmeny = minimumTetel(tomb);
 
 
+
+    }
+
+    public int minimumTetel(int[] tomb) {
+        return 0;
+    }
+
+    public int maximumTetel(int[] tomb) {
+        return 0;
     }
 
     private void szetvalogatasTetele(int[] tomb, int szam) {

@@ -70,4 +70,22 @@ class vezerloTest {
         assertArrayEquals(new int[]{43, 6, 8, 10,0,0,0,0}, vez.kivalogatasTetele(tomb,5));
 
     }
+
+    @Test
+    @DisplayName("Minimum kiválasztás tétele")
+    void minimumTetel() {
+        assertEquals(1, vez.minimumTetel(tomb));
+        assertNotEquals(2, vez.minimumTetel(tomb));
+        assertNotEquals(11, vez.minimumTetel(tomb));
+        assertEquals(1, vez.minimumTetel(new int[]{12,5,23,8,43,99,1}));
+    }
+
+    @Test
+    @DisplayName("Maximum kiválasztás tétele")
+    void maximumTetel() {
+        assertEquals(10,vez.maximumTetel(tomb));
+        assertNotEquals(2, vez.maximumTetel(tomb));
+        assertNotEquals(11, vez.maximumTetel(tomb));
+        assertEquals(99, vez.minimumTetel(new int[]{12,5,23,8,43,99,1}));
+    }
 }
