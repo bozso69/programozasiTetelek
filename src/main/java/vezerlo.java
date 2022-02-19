@@ -11,8 +11,39 @@ public class vezerlo {
         eredmeny = kivalasztasTetele(tomb, 5);
         isEredmeny = keresesTetele(tomb, 5);
         visszTomb = kivalogatasTetele(tomb, 5);
+        szetvalogatasTetele(tomb,5);
 
 
+    }
+
+    private void szetvalogatasTetele(int[] tomb, int szam) {
+
+        int[] tomb1 = new int[tomb.length];
+        int[] tomb2 = new int[tomb.length];
+        int t1sz=0;
+        int t2sz=0;
+
+        for (int Item: tomb) {
+            if (Item > szam){
+                tomb1[t1sz++] = Item;
+            }else tomb2[t2sz++] = Item;
+
+        }
+        System.out.println();
+        System.out.print("Tömb: ");
+        for (int Item: tomb) {
+            System.out.print(Item+", ");
+        }
+        System.out.println();
+        System.out.print("Tömb1: ");
+        for (int i = 0; i < t1sz; i++) {
+            System.out.print(tomb1[i] + ", ");
+        }
+        System.out.println();
+        System.out.print("Tömb2: ");
+        for (int i = 0; i < t2sz; i++) {
+            System.out.print(tomb2[i]+", ");
+        }
     }
 
     public int[] kivalogatasTetele(int[] tomb, int szam) {
