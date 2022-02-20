@@ -3,8 +3,10 @@ public class vezerlo {
         int[] tomb = {1, 2, 4, 5, 43, 6, 8, 10};
         int[] tomb1 = {1, 20, 40, 5, 43, 6, 80, 10};
         int[] visszTomb = new int[tomb.length];
+        int[] visszaUnio = new int[tomb.length + tomb1.length];
         int eredmeny;
         boolean isEredmeny;
+
 
         eredmeny = osszegzesTetele(tomb);
         eredmeny = megszamlalasTetele(tomb);
@@ -16,7 +18,14 @@ public class vezerlo {
         eredmeny = maximumTetel(tomb);
         eredmeny = minimumTetel(tomb);
         visszTomb = metszetTetele(tomb,tomb1);
+        visszaUnio = unioTetele(tomb,tomb1);
     }
+
+    public int[] unioTetele(int[] tomb, int[] tomb1) {
+        int[] vissza = new int[tomb.length+tomb1.length];
+
+
+    return vissza;}
 
     public int[] metszetTetele(int[] tomb, int[] tomb1) {
         int[] visszTomb = new int[tomb.length];
@@ -28,24 +37,6 @@ public class vezerlo {
                 }
 
             }
-        }
-
-        System.out.println();
-        System.out.println("****************");
-       System.out.print("Tömb: ");
-        for (int Item:tomb) {
-            System.out.print(Item+", ");
-        }
-        System.out.println();
-
-       System.out.print("Tömb1: ");
-        for (int Item:tomb1) {
-            System.out.print(Item+", ");
-        }
-        System.out.println();
-        System.out.print("Vissza Tömb: ");
-        for (int Item:visszTomb) {
-            System.out.print(Item+", ");
         }
         return visszTomb;}
 

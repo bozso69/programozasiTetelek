@@ -95,4 +95,10 @@ class vezerloTest {
     void metszetTetele() {
         assertArrayEquals(new int[]{1,5,43,6,10,0,0,0}, vez.metszetTetele(tomb,tomb1));
     }
+
+    @Test
+    @DisplayName("Unio tétel")
+    void unioTetele() {
+            assertArrayEquals(new int[]{1, 2, 4, 5, 43, 6, 8, 10, 20,40,80}, vez.unioTetele(tomb,tomb1));
+    }
 }
