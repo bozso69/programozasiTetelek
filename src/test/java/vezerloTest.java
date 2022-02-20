@@ -16,6 +16,7 @@ class vezerloTest {
 
     int[] tomb0 = {0,0,0,0,0,0,0,0,0,0,};
     int[] tombMinus = {-5,-2,-9,10,18,1,-12,12,-18,-14,};
+    int[] visszaTomb = {1,2,4,5,43,6,8,10,0,0,0,0,0,0,0,0};
 
     @BeforeEach
     void setUp() {
@@ -99,6 +100,8 @@ class vezerloTest {
     @Test
     @DisplayName("Unio tétel")
     void unioTetele() {
-            assertArrayEquals(new int[]{1, 2, 4, 5, 43, 6, 8, 10, 20,40,80}, vez.unioTetele(tomb,tomb1));
+            //assertArrayEquals(visszaTomb, vez.unioTetele(tomb,tomb1));
+            assertArrayEquals(new int[]{1, 2, 4, 5, 43, 6, 8, 10, 20,40,80,0,0,0,0,0}, vez.unioTetele(tomb,tomb1));
+
     }
 }

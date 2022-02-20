@@ -23,8 +23,27 @@ public class vezerlo {
 
     public int[] unioTetele(int[] tomb, int[] tomb1) {
         int[] vissza = new int[tomb.length+tomb1.length];
+        int j=0;
+        int k;
+        for (int Item: tomb) {
+            vissza[j++] = Item;
+        }
+        for (int Item:tomb1) {
+            k=0;
+            while (k<tomb.length && tomb[k] != Item){
+                k++;
+            }
+            if (k==tomb.length){
+                vissza[j++]=Item;
+            }
+            //System.out.print("k: "+k + " ");
+        }
 
+        System.out.println();
+        for (int Item:vissza) {
 
+            System.out.print(Item+ ", ");
+        }
     return vissza;}
 
     public int[] metszetTetele(int[] tomb, int[] tomb1) {
